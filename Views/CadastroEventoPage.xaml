@@ -1,0 +1,72 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CadastroEventos.Views.CadastroEventoPage"
+    Title="Cadastro de Eventos"
+    BackgroundColor="#F2F5FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="15">
+
+            <Label
+                Text="Cadastro de Eventos"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#173B70"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Preencha os dados do evento"
+                FontSize="15"
+                TextColor="Gray"
+                HorizontalOptions="Center"/>
+
+            <Label Text="Nome do evento" TextColor="#173B70"/>
+            <Entry
+                Placeholder="Digite o nome do evento"
+                Text="{Binding Nome}"
+                BackgroundColor="White"/>
+
+            <Label Text="Data de inÃ­cio" TextColor="#173B70"/>
+            <DatePicker
+                Date="{Binding DataInicio}"
+                BackgroundColor="White"/>
+
+            <Label Text="Data de tÃ©rmino" TextColor="#173B70"/>
+            <DatePicker
+                Date="{Binding DataTermino}"
+                BackgroundColor="White"/>
+
+            <Label Text="NÃºmero de participantes" TextColor="#173B70"/>
+            <Entry
+                Placeholder="Quantidade de participantes"
+                Keyboard="Numeric"
+                Text="{Binding NumeroParticipantes}"
+                BackgroundColor="White"/>
+
+            <Label Text="Local do evento" TextColor="#173B70"/>
+            <Entry
+                Placeholder="Digite o local do evento"
+                Text="{Binding Local}"
+                BackgroundColor="White"/>
+
+            <Label Text="Custo por participante (R$)" TextColor="#173B70"/>
+            <Entry
+                Placeholder="Ex: 50,00"
+                Keyboard="Numeric"
+                Text="{Binding CustoPorParticipante}"
+                BackgroundColor="White"/>
+
+            <Button
+                Text="CADASTRAR EVENTO"
+                Clicked="CadastrarEvento_Clicked"
+                BackgroundColor="#173B70"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                FontAttributes="Bold"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
